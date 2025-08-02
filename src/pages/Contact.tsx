@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import oilRefinery from '../assets/images/contactUsbanner.webp';
+import oilRefinery from '../assets/images/contactUsBannerImg.webp';
 
 const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },

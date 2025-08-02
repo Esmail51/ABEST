@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,6 +10,17 @@ import Contact from './pages/Contact';
 import footerImg from './assets/images/FooterBg.png';
 import Principals from './pages/Principals';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// --- NEW HELPER COMPONENT TO SCROLL TO TOP ON NAVIGATION ---
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null; // This component doesn't render anything
+}
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -159,7 +170,6 @@ const Footer: React.FC = () => {
     );
 };
 
-// --- NEW SCROLL TO TOP BUTTON COMPONENT ---
 const ScrollToTopButton: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -205,6 +215,7 @@ const ScrollToTopButton: React.FC = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* --- ADDED THE HELPER COMPONENT HERE --- */}
       <Header />
       <main className="overflow-x-hidden">
         <Routes>
@@ -218,7 +229,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <ScrollToTopButton /> {/* --- ADDED THE BUTTON HERE --- */}
+      <ScrollToTopButton />
     </Router>
   );
 }
