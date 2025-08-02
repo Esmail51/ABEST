@@ -15,6 +15,7 @@ import SpecialistImg from '../assets/images/speacalistManpower.png';
 import fireFighterImg from '../assets/images/firefighters.png';
 import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
 import safteyImg from '../assets/images/saftey.png';
+import { Link } from 'react-router-dom';
 
 // Animation Variants
 const fadeInStagger: Variants = {
@@ -76,12 +77,16 @@ const fadeInStagger: Variants = {
             Dynamic Industry
           </motion.h2>
           <motion.div variants={fadeInUp} className="mt-8 flex justify-start gap-4">
-            <button className="bg-transparent border-2 border-white text-white font-bold py-2 px-6 rounded-md hover:bg-white hover:text-black transition duration-300">
-              Contact
-            </button>
-            <button className="bg-orange-500 text-white font-bold py-2 px-6 rounded-md hover:bg-orange-600 transition duration-300">
-              Discover More
-            </button>
+            <Link to="/contact">
+                <button className="bg-transparent border-2 border-white text-white font-bold py-2 px-6 rounded-md hover:bg-white hover:text-black transition duration-300">
+                    Contact
+                </button>
+            </Link>
+            <Link to="/about">
+                <button className="bg-orange-500 text-white font-bold py-2 px-6 rounded-md hover:bg-orange-600 transition duration-300">
+                    Discover More
+                </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
