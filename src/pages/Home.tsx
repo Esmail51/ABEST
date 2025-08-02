@@ -12,10 +12,11 @@ import InstallationImg from '../assets/images/installationCommosion.png';
 import CalibrationImg from '../assets/images/calibration_test.png';
 import RepairImg from '../assets/images/servicing.png';
 import SpecialistImg from '../assets/images/speacalistManpower.png';
-import fireFighterImg from '../assets/images/firefighters.png';
+import ChemicalIndustryImg from '../assets/images/chemicalIndustry.webp';
 import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
-import safteyImg from '../assets/images/saftey.png';
 import { Link } from 'react-router-dom';
+import OilGASImg from '../assets/images/Oil-Refineries-and-Petrochemical-Plants.webp';
+import MarineImg from '../assets/images/embarcacoes-de-apoio-offshore.webp';
 
 // Animation Variants
 const fadeInStagger: Variants = {
@@ -105,9 +106,10 @@ const fadeInStagger: Variants = {
   
   const Services: React.FC = () => {
       const servicesData = [
-          { image: fireFighterImg, title: "FIRE FIGHTING" },
-          { image: oilRefinery, title: "GAS DETECTION" },
-          { image: safteyImg, title: "SAFETY" },
+          { image: OilGASImg, title: "OIL & GAS" },
+          { image: MarineImg, title: "MARINE & OFFSHORE" },
+          { image: ChemicalIndustryImg, title: "CHEMICAL INDUSTRY" },
+
       ];
   
       return (
