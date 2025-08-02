@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import { motion, type Variants } from 'framer-motion';
-import Home from './pages/Home'; // Assuming your original App content is moved to Home.tsx
+import { Menu, X, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import Services from './pages/Services';
@@ -10,9 +9,11 @@ import Clients from './pages/Clients';
 import Contact from './pages/Contact';
 import footerImg from './assets/images/FooterBg.png';
 import Principals from './pages/Principals';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = React.useState(false);
+    
     const navLinks = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
@@ -23,56 +24,91 @@ const Header: React.FC = () => {
         { name: "Contact Us", path: "/contact" },
     ];
 
+    const closeMenu = () => setIsOpen(false);
+
     return (
-        <header className="absolute top-0 left-0 w-full z-30">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-24">
-                    <div className="flex-shrink-0">
-                        <h1 className="text-3xl font-bold text-white">ABEST</h1>
+        <>
+            <header className="absolute top-0 left-0 w-full z-30">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-24">
+                        <div className="flex-shrink-0">
+                            <Link to="/" className="text-3xl font-bold text-white">
+                                ABEST
+                            </Link>
+                        </div>
+                        <nav className="hidden md:block">
+                            <div className="ml-10 flex items-baseline space-x-4">
+                                {navLinks.map((link) => (
+                                    <Link key={link.name} to={link.path} className="text-white hover:text-orange-300 px-3 py-2 rounded-md md:text-baselg:text-lg font-medium transition-colors">
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </nav>
+                        <div className="md:hidden">
+                            <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 focus:outline-none"
+                                aria-label="Open main menu"
+                            >
+                                <Menu className="block h-6 w-6" />
+                            </button>
+                        </div>
                     </div>
-                    <nav className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
-                            {navLinks.map((link) => (
-                                <Link key={link.name} to={link.path} className="text-white hover:text-orange-300 px-3 py-2 rounded-md md:text-baselg:text-lg font-medium transition-colors">
+                </div>
+            </header>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm md:hidden"
+                    >
+                        <div className="flex justify-end p-6">
+                             <button
+                                onClick={closeMenu}
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 focus:outline-none"
+                                aria-label="Close main menu"
+                            >
+                                <X className="block h-8 w-8" />
+                            </button>
+                        </div>
+                        <div className="flex flex-col items-center justify-center h-full -mt-20">
+                           {navLinks.map((link) => (
+                                <Link 
+                                    key={link.name} 
+                                    to={link.path} 
+                                    onClick={closeMenu}
+                                    className="text-gray-200 hover:text-orange-400 block py-4 text-2xl font-semibold transition-colors"
+                                >
                                     {link.name}
                                 </Link>
-                            ))}
+                           ))}
                         </div>
-                    </nav>
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 focus:outline-none"
-                            aria-label="Open main menu"
-                        >
-                            {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
-                        </button>
-                    </div>
-                </div>
-            </div>
-            {isOpen && (
-                <div className="md:hidden bg-black bg-opacity-80 backdrop-blur-sm">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {navLinks.map((link) => (
-                            <Link key={link.name} to={link.path} className="text-gray-200 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                                {link.name}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            )}
-        </header>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
 
 const Footer: React.FC = () => {
     const footerLinks = [
         { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
         { name: "Products", path: "/products" },
         { name: "Clients", path: "/clients" },
         { name: "Services", path: "/services" },
         { name: "Contact Us", path: "/contact" },
     ];
+
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <footer className="relative text-gray-300">
             <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${footerImg})`}} >
@@ -81,9 +117,14 @@ const Footer: React.FC = () => {
             <div className="relative max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     <div className="lg:col-span-2">
-                        <h3 className="text-2xl font-bold text-white mb-4">ABEST</h3>
+                        <h3 
+                            className="text-2xl font-bold text-white mb-4 cursor-pointer hover:text-orange-400 transition-colors"
+                            onClick={handleScrollToTop}
+                        >
+                            ABEST
+                        </h3>
                         <p className="text-sm max-w-md">
-                            ABER AHMED EQUIPMENT EST. (ABEST) is in business for over a decade, during this period we have gained the trust and goodwill of our various Clients, our Clients base continues to grow not just in U.A.E but in neighbouring Countries as well.
+                            ABER AHMED EQUIPMENT EST. (ABEST) is in business for over a decade, during this period we have gained the trust and goodwill of our various Clients.
                         </p>
                     </div>
                     <div>
@@ -91,7 +132,7 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start"><Phone className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>+971 2 6766366</span></li>
                             <li className="flex items-start"><Mail className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>SALES@ABEST.AE</span></li>
-                            <li className="flex items-start"><MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>FLAT NO. 708, 7TH FLOOR, AL GHAITH TOWER, P.O. BOX: 43596, HAMDAN BIN MOHAMMED STREET, ABU DHABI, U.A.E.</span></li>
+                            <li className="flex items-start"><MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>FLAT NO. 708, 7TH FLOOR, AL GHAITH TOWER...</span></li>
                         </ul>
                     </div>
                     <div>
@@ -104,7 +145,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className="mt-8 pt-8 border-t border-gray-700">
-                    <div className="flex flex-col md:flex-col md:gap-2 justify-between items-center text-sm">
+                    <div className="flex flex-col md:flex-row justify-between items-center text-sm">
                         <ul className="flex flex-wrap justify-center space-x-2 md:space-x-0 md:divide-x md:divide-gray-600 mb-4 md:mb-0">
                              {footerLinks.map(link => (
                                <li key={link.name} className="list-none"><Link to={link.path} className="hover:text-orange-400 transition-colors px-4">{link.name}</Link></li>
@@ -117,6 +158,49 @@ const Footer: React.FC = () => {
         </footer>
     );
 };
+
+// --- NEW SCROLL TO TOP BUTTON COMPONENT ---
+const ScrollToTopButton: React.FC = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
+
+    return (
+        <AnimatePresence>
+            {isVisible && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-8 right-8 bg-orange-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-orange-600 transition-colors"
+                    aria-label="Scroll to top"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.5 }}
+                >
+                    <ArrowUp size={24} />
+                </motion.button>
+            )}
+        </AnimatePresence>
+    );
+};
+
 
 function App() {
   return (
@@ -134,6 +218,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ScrollToTopButton /> {/* --- ADDED THE BUTTON HERE --- */}
     </Router>
   );
 }
