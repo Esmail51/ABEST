@@ -57,7 +57,7 @@ const Clients: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <Globe size={60} className="mx-auto mb-4 text-orange-400"/>
+                    {/* <Globe size={60} className="mx-auto mb-4 text-orange-400"/> */}
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Our Global Partnerships</h1>
                     <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
                        Powering industries worldwide through strong, collaborative relationships.

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { Package, Ship, Wrench, CheckCircle, Clock, ShieldCheck, HardHat } from 'lucide-react';
-import servicingImage from '../assets/images/saftey.png'; 
+import { Package, Ship, Wrench, CheckCircle, Clock, HardHat } from 'lucide-react';
+import servicingImage from '../assets/images/ourServicesBanner.webp'; 
 
 // --- Animation Variants with correct typing ---
 const fadeInUp: Variants = {

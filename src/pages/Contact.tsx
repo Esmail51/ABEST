@@ -1,19 +1,19 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
+import oilRefinery from '../assets/images/contactUsbanner.webp';
 
 const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={fadeInUp}>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">{children}</h2>
-        <div className="w-24 h-1 bg-orange-500 mx-auto mt-3"></div>
-    </motion.div>
-);
+// const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+//     <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={fadeInUp}>
+//         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">{children}</h2>
+//         <div className="w-24 h-1 bg-orange-500 mx-auto mt-3"></div>
+//     </motion.div>
+// );
 
 const Contact: React.FC = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Handshake } from 'lucide-react';
-import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
+import oilRefinery from '../assets/images/principalBanner.webp';
 
 // --- Animation Variants ---
 const fadeInUp: Variants = {
@@ -120,7 +120,7 @@ const Principals: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <Handshake size={60} className="mx-auto mb-4 text-orange-400"/>
+                    {/* <Handshake size={60} className="mx-auto mb-4 text-orange-400"/> */}
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Our Principals</h1>
                     <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
                         Collaborating with world-class manufacturers to deliver cutting-edge solutions.
