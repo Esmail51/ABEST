@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ArrowUp, Printer } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
@@ -135,15 +135,16 @@ const Footer: React.FC = () => {
                             ABEST
                         </h3>
                         <p className="text-sm max-w-md">
-                            ABER AHMED EQUIPMENT EST. (ABEST) is in business for over a decade, during this period we have gained the trust and goodwill of our various Clients.
+                            ABER AHMED EQUIPMENT L.L.C - S.P.C. (ABEST) is a reputed Trading and Technical Service Company located in Abu Dhabi, United Arab Emirates.
                         </p>
                     </div>
                     <div>
                         <h3 className="text-lg font-semibold text-white mb-4">GET IN TOUCH</h3>
                         <ul className="space-y-3 text-sm">
-                            <li className="flex items-start"><Phone className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>+971 2 6766366</span></li>
-                            <li className="flex items-start"><Mail className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>SALES@ABEST.AE</span></li>
-                            <li className="flex items-start"><MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>FLAT NO. 708, 7TH FLOOR, AL GHAITH TOWER...</span></li>
+                            <li className="flex items-start"><Phone className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>+971 2 6766366</span></li>
+                                <li className="flex items-start"><Printer className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>+971 2 6760360</span></li>
+                                <li className="flex items-start"><Mail className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>sales@abest.ae</span></li>
+                            <li className="flex items-start"><MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-orange-400" /> <span>Flat No. 708, 7th Floor, Al Ghaith Tower, P.O. Box: 43596, Hamdan Bin Mohammed Street, Sector: E8, Zone: Al Danah, Abu Dhabi, U.A.E.</span></li>
                         </ul>
                     </div>
                     <div>
@@ -162,7 +163,7 @@ const Footer: React.FC = () => {
                                <li key={link.name} className="list-none"><Link to={link.path} className="hover:text-orange-400 transition-colors px-4">{link.name}</Link></li>
                            ))}
                         </ul>
-                        <p className="text-center md:text-right">&copy; {new Date().getFullYear()} Aber Ahmed Equipment Est. Abu Dhabi, UAE</p>
+                        <p className="text-center md:text-right">&copy; {new Date().getFullYear()} Aber Ahmed Equipment L.L.C - S.P.C. Abu Dhabi, UAE</p>
                     </div>
                 </div>
             </div>

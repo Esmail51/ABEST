@@ -99,10 +99,10 @@ const About: React.FC = () => (
                 <div className="w-20 h-1 bg-orange-500 mb-6"></div>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>
-                      <strong>Aber Ahmed Equipment Est. (ABEST)</strong> is a reputed, GL Certified Trading and Technical Service Company established in 1995 in Abu Dhabi, UAE. 
+                      <strong>Aber Ahmed Equipment L.L.C - S.P.C. (ABEST)</strong> is a reputed Trading and Technical Service Company located in Abu Dhabi, United Arab Emirates.
                     </p>
                     <p>
-                      Managed by qualified professionals with two decades of experience, we have become a cornerstone in the Oil, Gas, Marine, and Industrial sectors. Our success stems from an unwavering focus on anticipating market trends, identifying customer needs, delivering value-added services, and keeping pace with technology.
+                      Abest is an ISO 9001 Certified Company managed by a team of Qualified Professional having two decades of experience in Oil, Gas, Marine and Industrial sectors of U.A.E. Abest is in business for three decade. During this period we have gained the trust and goodwill of our various clients. Our clients base continues to grow not just in U.A.E but in neighbouring Countries as well. Our range of Products and Services has also grown to meet different market demands. However, our core business continues to be in the fields of Process analyzers, Automation Control and Calibration/Testing. Abest success in this challenging market is the result of an unswerving focus on anticipating market trends, identifying and meeting our customer's requirements, providing them with value-added services and keeping up with advances in technology.
                     </p>
                 </div>
           </motion.div>
@@ -135,14 +135,14 @@ const About: React.FC = () => (
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
             >
-                <ServiceCard image={supplyImage} title="Supplier of Materials" icon={<Package size={24}/>}>
-                    We supply a comprehensive range of Oil/Gas & Marine materials including Navigation Aids, Weather Monitoring Systems, Laboratory Equipment, PPE, and more.
+                <ServiceCard image={supplyImage} title="Supplier Of Oil/Gas & Marine Materials" icon={<Package size={24}/>}>
+                   Abest is a supplier Of Oil/Gas & Marine Materials including Navigation Aids systems, Weather Monitoring Systems, Workshop & Laboratory Equipment, Personal Protection Equipment, Gas & Liquid Analyzers, Explosion Proof Electrical Equipment, Electrical Safety Kits, Process Control Instruments, Pressure Gauge, Flow Meters, Test & Calibration Equipment. and Bird deterrent System.
                 </ServiceCard>
                 <ServiceCard image={installationImage} title="Installation & Commissioning" icon={<Wrench size={24}/>}>
-                    We specialize in the installation and commissioning of H2S, CO, Hydrocarbon, and other critical Gas Detection and Process Control Instrumentation systems.
+                    Specialized in Integration of Sampling System for all kinds of Gas & Liquid Analyzers & Shelters for Analyzers. We also have Specialized team in installation & commissioning of gas & liquid analyzers, navigation aid systems.
                 </ServiceCard>
                 <ServiceCard image={servicingImage} title="Servicing & Repairing" icon={<Briefcase size={24}/>}>
-                    Our service facilities in Abu Dhabi and Dubai handle servicing, repair, and certification for all leading brands, offering both preventive and breakdown maintenance.
+                    Servicing & Repair of all leading brands of Analyzers, Gas detection & warning Systems. We also undertake maintenance contracts and Certification of the above System. Abest has Service facility in Musaffah, Abu Dhabi to Carry out after sales Services.
                 </ServiceCard>
                 <ServiceCard image={manpowerImage} title="Supply of Specialist Manpower" icon={<HardHat size={24}/>}>
                     We provide specialist manpower for DCS, Process Instruments, and Fire & Gas systems for onshore and offshore locations, including complete turnkey installations.

@@ -136,7 +136,7 @@ const fadeInStagger: Variants = {
             <h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome to ABEST</h2>
             <div className="w-24 h-1 bg-orange-500 mb-6"></div>
             <p className="text-gray-600 leading-relaxed">
-              Aber Ahmed Equipment Est., ABEST is established in the year 1995, in Abu Dhabi, UAE. Abest is a technical trading company managed by a team of Qualified Professionals having two decades of experience in Oil/Gas, Marine and Industrial Sectors of the United Arab Emirates.
+              Aber Ahmed Equipment L.L.C - S.P.C. ABEST is established in the year 1995, in Abu Dhabi, UAE. Abest is a technical trading company managed by a team of Qualified Professionals having two decades of experience in Oil/Gas, Marine and Industrial Sectors of the United Arab Emirates.
             </p>
           </motion.div>
           <motion.div className="flex justify-center md:justify-end" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeInRight}>

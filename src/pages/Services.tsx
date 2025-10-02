@@ -57,15 +57,15 @@ const ServiceListItem: React.FC<{ icon: React.ReactNode; children: React.ReactNo
 const Services: React.FC = () => {
 
     const coreServices = [
-        { icon: <Package size={22}/>, text: 'Supplier of Oil/Gas Materials' },
-        { icon: <Ship size={22}/>, text: 'Supplier of Marine Materials' },
-        { icon: <Wrench size={22}/>, text: 'Installation and Commissioning, start-up and training' },
-        { icon: <CheckCircle size={22}/>, text: 'Servicing and Maintenance' },
-        { icon: <HardHat size={22}/>, text: 'Supply of Specialist Manpower' },
+        { icon: <Package size={22}/>, text: 'Supplier of Oil/Gas Analyzers' },
+        { icon: <Ship size={22}/>, text: 'Installation and Commissioning, start-up and training' },
+        { icon: <Wrench size={22}/>, text: 'Servicing and Maintenance' },
+        { icon: <CheckCircle size={22}/>, text: 'Spare parts supply' },
+        { icon: <HardHat size={22}/>, text: 'Servicing/Repairing' },
     ];
 
     const afterSalesServices = [
-        "Online Gas Analyser and Gas Chromatograph",
+        "Supplier of Oil/Gas Materials",
         "Portable Gas Detectors",
         "Fixed Gas Monitoring Systems",
         "Marine Fire Detection & Alarm Systems",
@@ -91,7 +91,8 @@ const Services: React.FC = () => {
                 >
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Our Services</h1>
                     <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
-                        Expert support for analyzers and systems delivered by our qualified and experienced engineers.
+                        Abest maintains a group of qualified and experienced test and repair engineers to support their customers for analyzers and analyzer systems supplied around the Middle east
+                        .
                     </p>
                 </motion.div>
             </div>
@@ -106,9 +107,10 @@ const Services: React.FC = () => {
                             viewport={{ once: true, amount: 0.3 }}
                             variants={staggerContainer}
                         >
-                            <h2 className="text-3xl font-bold text-gray-800 mb-6">Comprehensive Support</h2>
-                            <p className="text-gray-600 leading-relaxed mb-8">
-                                With a group of well-trained engineers, we offer different kinds of support varying from maintenance repairs, preventive maintenance contracts, start-up, commissioning, site surveys, and customer trainings for on-shore or off-shore analyzer applications.
+                            <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
+                            <p className="text-gray-600 leading-relaxed mb-6">
+                                With a group of well trained engineers we offer different kind of support varying from maintenance repairs, preventive maintenance contracts, start-up, commissioning, site surveys, customer trainings and factory acceptance testing for on-shore or off-shore analyzer applications.<br/>
+                                To ensure the best possible after sales service on the delivered analyzers and to minimize their down times, Abest stocks a strategic level of spare parts and consumables.
                             </p>
                             <ul className="space-y-4">
                                {coreServices.map(service => <ServiceListItem key={service.text} icon={service.icon}>{service.text}</ServiceListItem>)}
@@ -139,7 +141,7 @@ const Services: React.FC = () => {
                         variants={fadeInUp}
                     >
                          <p className="text-lg text-gray-600 mb-10">
-                            We have manufacturer-trained and certified engineers to carry out servicing, calibration, and certification for a wide range of equipment. To ensure the best possible after-sales service and minimize downtime, we stock a strategic level of spare parts and consumables.
+                           After Sales Services Support (Back-up Service): We have manufacturer trained/Certified Engineer's (trained at manufacturer facility) to carryout servicing, calibration and certification of the following equipment.
                         </p>
                     </motion.div>
                     <motion.div 
@@ -175,7 +177,7 @@ const Services: React.FC = () => {
                         >
                             <h3 className="text-3xl font-bold mb-2">Round-the-Clock Emergency Support</h3>
                             <p className="text-orange-100 max-w-2xl">
-                                We provide complete service back-up for all products we sell. Our service engineers are available 24 hours a day, 7 days a week to attend to any emergency calls from our clients.
+                               We provide complete service back-up to all the products sold by us. We also maintain adequate spares in stock and our service Engineers are available round the clock/24 hours, 7 days/week to attend to any emergency calls from our clients.
                             </p>
                         </motion.div>
                         <motion.div

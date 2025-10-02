@@ -2,18 +2,22 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Thermometer, Waves, FlaskConical } from 'lucide-react';
 import oilRefinery from '../assets/images/productPage.webp';
-import FlameSpecIR3HDImg from '../assets/images/FlameSpec-IR3-HD.webp';
-import OxygenGasSensorImg from '../assets/images/OxygenGasSensor.webp';
-import GasAnalyserImg from '../assets/images/GasAnalyser.webp';
+import FlameSpecIR3HDImg from '../assets/images/Product Pics/fgd/ir3 flame without and with camera.webp';
+import OxygenGasSensorImg from '../assets/images/Product Pics/mettler/Inpro 6900i.jpg';
+import GasAnalyserImg from '../assets/images/Product Pics/servomax/servopro 4100.webp';
 import MultiChannelAnalyzerImg from '../assets/images/THORNTON770MAX.webp';
-import PortableGasANalyzerImg from '../assets/images/portableGasAnalyser.webp';
-import OxygenAnalyzer from '../assets/images/oxygenAnalyser.webp';
-import NavigationAndAidsImg from '../assets/images/navigationAndAids.webp';
+import PortableGasANalyzerImg from '../assets/images/Product Pics/servomax/Servoflex-Servomex-5100.webp';
+import OxygenAnalyzer from '../assets/images/Product Pics/Michell Instruments/easidewproxp.png';
+import NavigationAndAidsImg from '../assets/images/Product Pics/orga/foghorn.jpg';
 import SoundHornImg from '../assets/images/soundHorn.webp';
 import VisibilityMeterImg from '../assets/images/visibiltyMeter.webp';
-import WinCompassImg from '../assets/images/wimCompass.webp';
-import Wim9900Img from '../assets/images/Wim9900.webp';
-import RockMountAnalyzerImg from '../assets/images/rockMountANalyzer.webp';
+import WinCompassImg from '../assets/images/Product Pics/hobre/wobbe index.jpg';
+// import Wim9900Img from '../assets/images/Wim9900.webp';
+// import RockMountAnalyzerImg from '../assets/images/rockMountANalyzer.webp';
+import BirdDetersentSystem from '../assets/images/Product Pics/scarecrow/bird deterrent system.jpg';
+import mettlerPh from '../assets/images/Product Pics/mettler/inpro 7100i.jpg'
+import conductivityMeter from '../assets/images/Product Pics/mettler/conductivity meter.jpg'
+
 
 
 
@@ -145,7 +149,7 @@ const OilGasContent = () => (
                 description="An advanced Triple IR (IR3) flame detector that provides ultra-fast detection of fires and explosions, minimizing risk and maximizing safety." 
             />
             <ProductCard 
-                title="Mettler Toledo InPro6800 G" 
+                title="Mettler Toledo InPro6800" 
                 category="Oxygen Gas Sensor"
                 image={OxygenGasSensorImg}
                 description="Amperometric oxygen gas sensor for in-line measurement in chemical processes, offering high availability and excellent performance without complex sampling systems." 
@@ -157,13 +161,13 @@ const OilGasContent = () => (
                 description="A versatile process control analyser that can measure up to four gases simultaneously, featuring stable, reliable sensors and low maintenance." 
             />
              <ProductCard 
-                title="THORNTON 770MAX" 
+                title="I9400" 
                 category="Multi-Channel Analyzer"
                 image={MultiChannelAnalyzerImg}
                 description="A powerful multi-parameter transmitter with Smart Sensor Technology, capable of monitoring up to 6 channels for a wide range of measurements." 
             />
             <ProductCard 
-                title="SERVOFLEX Micro i.s" 
+                title="SERVOMEX Micro i.s (5100 i.s)" 
                 category="Portable Gas Analyser"
                 image={PortableGasANalyzerImg}
                 description="An intrinsically safe portable analyser certified for zone 0. It uses non-depleting technologies to measure O2, CO2, and CO levels." 
@@ -172,7 +176,13 @@ const OilGasContent = () => (
                 title="XTP600 Oxygen Analyzer" 
                 category="Oxygen Analyzer"
                 image={OxygenAnalyzer}
-                description="A rugged thermo-paramagnetic oxygen analyzer for safe or hazardous areas, offering high accuracy, stability, and low maintenance." 
+                description="When a process oxygen application demands high accuracy and stability, along with lowest maintenance cost, paramagnetic oxygen technology is usually preferred. If, in addition, the application calls for a rugged and reliable, corrosion resistant analyzer, the thermo-paramagnetic principle of Michell’s new XTP600 series makes it the instrument of choice." 
+            />
+            <ProductCard 
+                title="WIM COMPASS Series" 
+                category="Process Analyzer"
+                image={WinCompassImg}
+                description="The latest in process analyzers from Hobré Instruments for measuring Wobbe Index, Heating Value/BTU, and Combustion Air Requirement Index." 
             />
         </div>
     </div>
@@ -203,6 +213,12 @@ const MarineContent = () => (
                 image={VisibilityMeterImg}
                 description="A reliable and low-maintenance visibility meter designed to withstand harsh offshore conditions and automatically trigger foghorns or lights." 
             />
+            <ProductCard 
+                title="Bird Deterrent Sysytem" 
+                category="Signalling Systems"
+                image={BirdDetersentSystem}
+                description="A bird deterrent system is a method or combination of methods used to prevent birds from roosting or nesting in unwanted areas, such as agricultural fields, buildings, or industrial sites, by using physical barriers, visual deterrents, sound, or irritants" 
+            />
         </div>
     </div>
 );
@@ -214,23 +230,30 @@ const ChemicalContent = () => (
             Process analyzers that provide precise measurements of fuel gas composition to ensure stability, prevent unwanted emissions, and meet contractual specifications.
         </p>
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProductCard 
-                title="WIM COMPASS Series" 
-                category="Process Analyzer"
-                image={WinCompassImg}
-                description="The latest in process analyzers from Hobré Instruments for measuring Wobbe Index, Heating Value/BTU, and Combustion Air Requirement Index." 
-            />
-            <ProductCard 
+            
+            {/* <ProductCard 
                 title="WIM 9900 Series" 
                 category="Wobbe Index Analyzer"
                 image={Wim9900Img}
                 description="Measures Wobbe Index and Calorific Value for various gases. It offers an unmatched combination of response time, accuracy, and availability." 
-            />
-            <ProductCard 
+            /> */}
+            {/* <ProductCard 
                 title="OMA-406 Rack Mount" 
                 category="Rack Mount Analyzer"
                 image={RockMountAnalyzerImg}
                 description="Classic OMA performance in a lab-friendly, rack-mounted form factor, providing typical OMA outputs like 4-20mA, RS232, and Modbus." 
+            /> */}
+            <ProductCard 
+                title="Mettler Toledo PH" 
+                category="Conductivity Analyzer"
+                image={mettlerPh}
+                description="Digital pH sensors are sensors that provide a reliable, digital pH measurement signal for in-line measurement applications. METTLER TOLEDO's digital pH probes use Intelligent Sensor Management (ISM) technology." 
+            />
+             <ProductCard 
+                title="Conductivity Analyzer" 
+                category="Conductivity Analyzer"
+                image={conductivityMeter}
+                description="A conductivity sensor measures the ability of a solution to conduct an electrical current. It is the presence of ions in a solution that allow the solution to be conductive: the greater the concentration of ions, the greater the conductivity." 
             />
         </div>
     </div>

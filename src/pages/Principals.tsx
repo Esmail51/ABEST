@@ -2,6 +2,8 @@ import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Handshake } from 'lucide-react';
 import oilRefinery from '../assets/images/principalBanner.webp';
+import Michell_Instruments from '../assets/images/michell_instruments.png';
+import Ruastech from '../assets/images/ruas-tech-enginnering-pvt-ltd-logo.webp';
 
 // --- Animation Variants ---
 const fadeInUp: Variants = {
@@ -23,65 +25,83 @@ const staggerContainer: Variants = {
 // --- Data for Principals ---
 const principalsData = [
     {
-        name: "Fire & Gas Detection Technologies",
-        description: "Manufacturer of Flame detectors for the Oil & Gas industry, Petrochemical and other high-risk industries.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/07/FGD.jpg"
-    },
-    {
-        name: "GEMCO International B.V",
-        description: "Specialized in design, engineering & construction of industrial workshops.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/gemco.png"
-    },
-    {
         name: "Mettler Toledo AG",
-        description: "Process Analytics, Measurement Solutions for Industrial Applications.",
+        description: "PH, Conductivity, Dissolved oxygen, TOC, Sodium, Silica & Laser Gas Analyzers.",
         logoUrl: "https://abest.ae/wp-content/uploads/2025/02/mettler-toledo.jpg"
     },
     {
-        name: "Rose Systemtechnik",
-        description: "Junction Boxes & Custom made Industrial Enclosures.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/rose.gif"
-    },
-    {
         name: "Servomex Group Limited",
-        description: "Process/Oxygen, Hydrocarbon, CO, CO2, NOX Analysers for oil & gas industries.",
+        description: "O2, Co, Co2, Coc, CH4, Analyzer Industrial Purity Analyzers systems.",
         logoUrl: "https://abest.ae/wp-content/uploads/2025/02/servomex.png"
     },
     {
-        name: "Shaw Moisture Meters",
-        description: "Portable & online Moisture Analysers.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/shaw.gif"
-    },
-    {
-        name: "Monicon Technology",
-        description: "Gas Detection Systems.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/monicon.png"
-    },
-    {
-        name: "Orga B.V",
-        description: "Aids to navigation and obstruction lighting for safety and compliance.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/orga.png"
-    },
-    {
-        name: "Klaxon Signals Ltd.",
-        description: "Exd Audio & Visual Alarms.",
-        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/klaxon.gif"
-    },
-    {
         name: "JM Canty Inc",
-        description: "Oil in water analyzers, Sight Glass, and High Temperature Vessel Cameras.",
+        description: "Oil in water & particle size analyzers, Higher temperature cameras, Sight Glass, and vessel lights",
         logoUrl: "https://abest.ae/wp-content/uploads/2025/02/jmcanty.jpg"
     },
     {
         name: "Hobré Instruments BV",
-        description: "On-line analyzers and complete turnkey analyzer systems.",
+        description: "H2S, Co2, H2O analyzer, wobbe index analyzer, XRF elemental analyzer.",
         logoUrl: "https://abest.ae/wp-content/uploads/2025/02/hobre.png"
+    },
+     {
+        name: "Fire & Gas Detection Technologies",
+        description: "IR3 flame detector, IR3 flame detector with camera, UVIR flame detector, UVIR flame detector with camera",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/07/FGD.jpg"
     },
     {
         name: "Scarecrow Group",
-        description: "Bird Dispersal systems for Safe & Hazardous Areas.",
+        description: "Bird deterrent systems for offshore platform/Helideck.",
         logoUrl: "https://abest.ae/wp-content/uploads/2025/02/scarecrow.png"
+    },
+    {
+        name: "Rose Systemtechnik",
+        description: "Hazardous & weather proof enclosures and junction boxes.",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/rose.gif"
+    },
+    {
+        name: "Orga B.V",
+        description: "Helideck lighting, Status light, windsocks, Marine Lanterns, Foghorns",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/orga.png"
+    },
+    {
+        name: "Shaw Moisture Meters",
+        description: "Moisture & Dew point Analyzers.",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/shaw.gif"
+    },
+    {
+        name: "Michell Instruments",
+        description: "Easidew PRO XP, Easidew PRO I.S. dew-point transmitter, Condumax II online hydrocarbon dew-point analyzer, Liquidew moisture in liquid, Optipeak TDL600 - moisture in natural gas, Promet EExd, QMA 601 - process moisture analyzer.",
+        logoUrl: Michell_Instruments
+    
+    },
+     {
+        name: "Klaxon Signals Ltd.",
+        description: "GP6/GP10/GP12 siren, Nexus 105/110/120 sounder beacon, Sonos sounder, Beacon, GP&FP Siren Control Panel, Mono 72/Duplo motor driven siren.",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/klaxon.gif"
+    },
+   
+    {
+        name: "GEMCO International B.V",
+        description: "Specialist in consulting and design of maintenance workshops and warehouses.",
+        logoUrl: "https://abest.ae/wp-content/uploads/2025/02/gemco.png"
+    },
+    {
+        name: "Ruastech Engineering Pvt. Ltd.",
+        description: "Engineering, design, front end engineering design (FEED), Simulation Studies, Safety Study",
+        logoUrl: Ruastech
     }
+    
+    // {
+    //     name: "Monicon Technology",
+    //     description: "Gas Detection Systems.",
+    //     logoUrl: "https://abest.ae/wp-content/uploads/2025/02/monicon.png"
+    // },
+    
+   
+    
+    
+    
 ];
 
 

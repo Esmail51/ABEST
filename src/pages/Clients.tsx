@@ -3,23 +3,52 @@ import { motion, type Variants } from 'framer-motion';
 import { Globe } from 'lucide-react';
 import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
 import worldMapBg from '../assets/images/FooterBg.png'; 
+import ADCOImg from '../assets/images/Client Logos/1 - ADNOC GROUP.jpg'
+import NMDCImg from '../assets/images/Client Logos/2-NMDC Energy.png'
+import TECHNIP_ENERGIES from '../assets/images/Client Logos/3-TECHNIP_ENERGIES.png'
+import DUGAS from '../assets/images/Client Logos/4- dugas.png';
+import ENOC from '../assets/images/Client Logos/5- ENOC.png';
+import DUSUP from '../assets/images/Client Logos/6-Dusup.jpg';
+import CPECC from '../assets/images/Client Logos/7-CPECC.jpg';
+import Dolphin_Energy from '../assets/images/Client Logos/8- dolphin energy.png';
+import JULPHAR from '../assets/images/Client Logos/9-Julphar.png';
+import McDermott from '../assets/images/Client Logos/10- McDermott.jpg';
+import krohne from '../assets/images/Client Logos/11- krohne.png';
+import ADOC from '../assets/images/Client Logos/12-ADOC.jpg';
+import Honeywell from '../assets/images/Client Logos/13-  Honeywell.webp';
+import EmiratesGlobalAluminium from '../assets/images/Client Logos/14- Emirates Global Aluminium.png';
+import GlobalPharma from '../assets/images/Client Logos/15- global pharma.png';
+import WellPharma from '../assets/images/Client Logos/16 - Well Pharma.avif';
+import Borouge from '../assets/images/Client Logos/Borouge_logo.gif';
+import oilGas from '../assets/images/Client Logos/abu_dhabi_oil.gif';
+
+
+
+
 
 // --- Client Data ---
 const clients = [
-    { name: "ADCO", logo: "https://abest.ae/wp-content/uploads/2025/02/clients.jpg" },
-    { name: "ADGAS", logo: "https://abest.ae/wp-content/uploads/2025/02/2-1.jpg" },
-    { name: "AADC", logo: "https://abest.ae/wp-content/uploads/2025/02/3-1.jpg" },
-    { name: "ADMA-OPCO", logo: "https://abest.ae/wp-content/uploads/2025/02/4-1.jpg" },
-    { name: "ADNOC", logo: "https://abest.ae/wp-content/uploads/2025/02/5-1.jpg" },
-    { name: "FERTIL", logo: "https://abest.ae/wp-content/uploads/2025/02/6-1.jpg" },
-    { name: "GASCO", logo: "https://abest.ae/wp-content/uploads/2025/02/7-1.jpg" },
-    { name: "TAKREER", logo: "https://abest.ae/wp-content/uploads/2025/02/8-1.jpg" },
-    { name: "NDC", logo: "https://abest.ae/wp-content/uploads/2025/02/9-1.jpg" },
-    { name: "NPCC", logo: "https://abest.ae/wp-content/uploads/2025/02/10-2.jpg" },
-    { name: "Ramsys Engineering", logo: "https://abest.ae/wp-content/uploads/2025/02/11-2.jpg" },
-    { name: "ETISALAT", logo: "https://abest.ae/wp-content/uploads/2025/02/12-2.jpg" },
-    { name: "Borouge", logo: "https://abest.ae/wp-content/uploads/2025/02/13-2.jpg" },
-    { name: "Govt. of Ras Al Khaimah", logo: "https://abest.ae/wp-content/uploads/2025/02/14-2.jpg" }
+    { name: "ADNOC - Onshore", logo: ADCOImg },
+    { name: "ADNOC - Offshore", logo: ADCOImg },
+    { name: "ADNOC - Gas processing", logo: ADCOImg },
+    { name: "ADNOC - Refining", logo: ADCOImg },
+    { name: "ADNOC - Drilling", logo: ADCOImg },
+    { name: "NMDC Energy", logo: NMDCImg },
+    { name: "TECHNIP ENERGIES", logo: TECHNIP_ENERGIES },
+    { name: "DUGAS", logo: DUGAS },
+    { name: "ENOC", logo: ENOC },
+    { name: "DUSUP", logo: DUSUP },
+    { name: "CPECC", logo: CPECC },
+    { name: "DOLPHON ENERGY", logo: Dolphin_Energy },
+    { name: "JULPHAR", logo: JULPHAR },
+    { name: "McDermott", logo: McDermott },
+    { name: "KROHNE", logo: krohne },
+    { name: "Abu Dhabi Oil Co.Ltd", logo: ADOC },
+    { name: "HONEYWELL", logo: Honeywell },
+    { name: "EMIRATES GLOBAL ALUMINUM", logo: EmiratesGlobalAluminium },
+    { name: "GLOBAL PHARMA", logo: GlobalPharma },
+    { name: "WELL PHARMA", logo: WellPharma },
+    { name: "BOROUGE", logo: Borouge },
 ];
 
 // --- Animation Variants ---

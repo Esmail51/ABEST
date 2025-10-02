@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Printer } from 'lucide-react';
 import oilRefinery from '../assets/images/contactUsBannerImg.webp';
 
 const fadeInUp: Variants = {
@@ -36,8 +36,9 @@ const Contact: React.FC = () => {
                             <h2 className="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
                             <ul className="space-y-4 text-lg">
                                 <li className="flex items-start"><Phone className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>+971 2 6766366</span></li>
-                                <li className="flex items-start"><Mail className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>SALES@ABEST.AE</span></li>
-                                <li className="flex items-start"><MapPin className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>FLAT NO. 708, 7TH FLOOR, AL GHAITH TOWER, P.O. BOX: 43596, HAMDAN BIN MOHAMMED STREET, ABU DHABI, U.A.E.</span></li>
+                                <li className="flex items-start"><Printer className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>+971 2 6760360</span></li>
+                                <li className="flex items-start"><Mail className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span>sales@abest.ae</span></li>
+                                <li className="flex items-start"><MapPin className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-orange-500" /> <span> Flat No. 708, 7th Floor, Al Ghaith Tower, P.O. Box: 43596, Hamdan Bin Mohammed Street, Sector: E8, Zone: Al Danah, Abu Dhabi, U.A.E.</span></li>
                             </ul>
                             <div className="mt-8">
                                 <iframe
