@@ -16,7 +16,8 @@ import WinCompassImg from '../assets/images/Product Pics/hobre/wobbe index.jpg';
 // import RockMountAnalyzerImg from '../assets/images/rockMountANalyzer.webp';
 import BirdDetersentSystem from '../assets/images/Product Pics/scarecrow/bird deterrent system.jpg';
 import mettlerPh from '../assets/images/Product Pics/mettler/inpro 7100i.jpg'
-import conductivityMeter from '../assets/images/Product Pics/mettler/conductivity meter.jpg'
+import conductivityMeter from '../assets/images/Product Pics/mettler/conductivity meter.jpg';
+import OilInWater from '../assets/images/Product Pics/jm canty/oil in water and particle size analyzer.webp';
 
 
 
@@ -184,6 +185,13 @@ const OilGasContent = () => (
                 image={WinCompassImg}
                 description="The latest in process analyzers from Hobré Instruments for measuring Wobbe Index, Heating Value/BTU, and Combustion Air Requirement Index." 
             />
+            <ProductCard 
+                title="OIL IN WATER & PARTICLE SIZE ANALYZER" 
+                category="Process Analyzer"
+                image={OilInWater}
+                description="The CANTY Inflow™ is a vision-based camera system used with the CANTY Vector System image processor for oil in water concentration and size measurement in a lab environment / at-line / in-line process" 
+            />
+
         </div>
     </div>
 );
