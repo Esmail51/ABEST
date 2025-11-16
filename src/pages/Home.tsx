@@ -13,7 +13,7 @@ import CalibrationImg from '../assets/images/calibration_test.png';
 import RepairImg from '../assets/images/servicing.png';
 import SpecialistImg from '../assets/images/speacalistManpower.png';
 import ChemicalIndustryImg from '../assets/images/chemicalIndustry.webp';
-import oilRefinery from '../assets/images/oilrefinaryImg.jpg';
+import oilRefinery from '../assets/images/ONG.jpg';
 import { Link } from 'react-router-dom';
 import OilGASImg from '../assets/images/Oil-Refineries-and-Petrochemical-Plants.webp';
 import MarineImg from '../assets/images/embarcacoes-de-apoio-offshore.webp';
@@ -55,8 +55,8 @@ const fadeInStagger: Variants = {
   // Helper component for Expertise Items to match the design
   const ExpertiseItem: React.FC<{ image: string; title: string }> = ({ image, title }) => (
     <div className="flex flex-col items-center text-center p-2">
-      <div className="w-16 h-16 bg-gray-100 hover:bg-orange-100 transition-all duration-300 rounded-full mb-4 shadow-md hover:shadow-lg flex items-center justify-center">
-        <img src={image} alt={title} className="h-10 w-auto" />
+      <div className="w-20 h-20 bg-gray-100 hover:bg-orange-100 transition-all duration-300 rounded-full mb-4 shadow-md hover:shadow-lg flex items-center justify-center">
+        <img src={image} alt={title} className="h-12 w-auto" />
       </div>
       <h3 className="font-semibold text-gray-600 text-sm md:text-base">{title}</h3>
     </div>

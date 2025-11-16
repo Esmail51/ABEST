@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                         <nav className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 {navLinks.map((link) => (
-                                    <Link key={link.name} to={link.path} className="text-white hover:text-orange-300 px-3 py-2 rounded-md md:text-baselg:text-lg font-medium transition-colors">
+                                    <Link key={link.name} to={link.path} className="text-white hover:text-orange-300 px-3 py-2 rounded-md md:text-lg lg:text-xl font-medium transition-colors">
                                         {link.name}
                                     </Link>
                                 ))}
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                                     key={link.name} 
                                     to={link.path} 
                                     onClick={closeMenu}
-                                    className="text-gray-200 hover:text-orange-400 block py-4 text-2xl font-semibold transition-colors"
+                                    className="text-gray-200 hover:text-orange-400 block py-4 text-3xl font-semibold transition-colors"
                                 >
                                     {link.name}
                                 </Link>
